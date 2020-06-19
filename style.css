@@ -84,7 +84,7 @@ color: thistle;
 }
 
 .result {
-    box-sizing: border-box;
+  box-sizing: border-box;
   width: 50%;
   border: 5px solid red;
   float: left;
