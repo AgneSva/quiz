@@ -93,10 +93,18 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusclass(button, button.dataset.correct)
     })
+
+if (selectedButton.dataset = correct) {
+        correctCount++;
+
+    }
+
+
     if (shuffleQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     }
     else {
+        document.getElementById('result').innerHTML = 'RESULT   ' + correctCount + ' / '+ question.length;
         startButton.innerText = 'Restart'
         resultBox.classList.remove('hide')
 
@@ -105,11 +113,8 @@ function selectAnswer(e) {
 
 
     }
-    if (selectedButton.dataset = correct) {
-        correctCount++;
-
-    }
-    document.getElementById('result').innerHTML = correctCount;
+    
+    
 }
 
 
