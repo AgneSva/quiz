@@ -35,8 +35,8 @@ function startGame() {
     correctCount = 0;
     //prie start mygtuko pridedam klase "hide" kad paslepti
     startButton.classList.add('hide')
-    //resultBox.classList.add('hide')
-
+    resultBox.classList.add('hide')
+answerButtonsElement.classList.remove('hide')
     //paima bet kuri klausima is array:
     shuffleQuestions = question.sort(() => Math.random() - .5)
     currentQuestionIndex = 0;
@@ -107,20 +107,26 @@ if (selectedButton.dataset = correct) {
         nextButton.classList.remove('hide')
     }
     else {
-        document.getElementById('result').innerHTML = 'RESULT   ' + correctCount + ' / '+ question.length;
-        startButton.innerText = 'Restart'
-        resultBox.classList.remove('hide')
-
-        startButton.classList.remove('hide')
-
-
-
-    }
-    
-    
+endPage();
+    }  
 }
 
 
+//------------------------------------------
+function endPage(){
+
+document.getElementById('result').innerHTML = 'RESULT   ' + correctCount + ' / '+ question.length;
+startButton.innerText = 'Restart'
+resultBox.classList.remove('hide')
+
+startButton.classList.remove('hide')
+
+questionContainerElement.classList.add('hide')
+
+answerButtonsElement.classList.add('hide')
+clearStatusClass();
+
+}
 //-----------------------------------------------------------//
 
 
