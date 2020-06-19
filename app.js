@@ -25,6 +25,9 @@ fetch("questions.json").then(res => {
         question = loadedQuestions;
 
     });
+
+
+   
 //-----------------------------------------------------------//
 
 function startGame() {

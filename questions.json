@@ -1,43 +1,43 @@
 [{
-    "question": "kiek bus du plius du?",
+    "question":  "What is the shape of the toy invented by Hungarian professor Ernő Rubik?",
     "answers": [
-        {"text": "4", "correct": true},
-        {"text":"1", "correct": false},
-        {"text": "1", "correct": false},
-        {"text": "1", "correct": false}
+        {"text":  "Sphere", "correct": false},
+        {"text":  "Cylinder", "correct": false},
+        {"text": "Pyramid", "correct": false},
+        {"text": "Cube", "correct": true}
     ]},
     {
-        "question": "kiek bus 4 plius 2?",
+        "question": "What was the nickname given to the Hughes H-4 Hercules, a heavy transport flying boat which achieved flight in 1947?",
         "answers": [
-           {"text": "6", "correct": true},
-           {"text": "1", "correct": false},
-           {"text": "1", "correct": false},
-           {"text": "1", "correct": false}
+           {"text": "Spruce Goose", "correct": true},
+           {"text":  "Noah's Ark", "correct": false},
+           {"text": "Fat Man", "correct": false},
+           {"text": "Trojan Horse", "correct": false}
        ]}
        ,
     {
-        "question": "auto?",
+        "question": "What is Tasmania?",
         "answers": [
-           {"text": "1", "correct": false},
-           {"text": "1", "correct": false},
-           {"text":"auto", "correct": true},
-           {"text": "1", "correct": false}
+           {"text": "A flavor of Ben and Jerry's ice-cream", "correct": false},
+           {"text": "A Psychological Disorder", "correct": false},
+           {"text":"An Australian State", "correct": true},
+           {"text": "The Name of a Warner Brothers Cartoon Character", "correct": false}
        ]},
        {
-        "question": "avis?",
+        "question": "The likeness of which president is featured on the rare $2 bill of USA currency??",
           "answers": [
-              {"text": "23", "correct": false},
-              {"text": "23", "correct": false},
-              {"text": "23", "correct": false},
-              {"text": "avis", "correct": true}
+              {"text": "Martin Van Buren", "correct": false},
+              {"text": "Ulysses Grant", "correct": false},
+              {"text": "John Quincy Adams", "correct": false},
+              {"text": "homas Jefferson", "correct": true}
           ]}
           ,
        {
-        "question": "lanas?",
+        "question":  "What is the name of NASA's most famous space telescope?",
           "answers": [
-              {"text": "23", "correct": false},
-              {"text": "23", "correct": false},
-              {"text": "23", "correct": false},
-              {"text": "lanas", "correct": true}
+              {"text": "Big Eye", "correct": false},
+              {"text": "Death Star", "correct": false},
+              {"text": "Millenium Falcon", "correct": false},
+              {"text": "Hubble Space Telescope", "correct": true}
           ]}
 ]
