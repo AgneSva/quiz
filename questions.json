@@ -1,0 +1,34 @@
+[{
+    "question": "kiek bus du plius du?",
+    "answers": [
+        {"text": "4", "correct": true},
+        {"text":"1", "correct": false},
+        {"text": "1", "correct": false},
+        {"text": "1", "correct": false}
+    ]},
+    {
+        "question": "kiek bus 4 plius 2?",
+        "answers": [
+           {"text": "6", "correct": true},
+           {"text": "1", "correct": false},
+           {"text": "1", "correct": false},
+           {"text": "1", "correct": false}
+       ]}
+       ,
+    {
+        "question": "auto?",
+        "answers": [
+           {"text": "1", "correct": false},
+           {"text": "1", "correct": false},
+           {"text":"auto", "correct": true},
+           {"text": "1", "correct": false}
+       ]},
+       {
+        "question": "avis?",
+          "answers": [
+              {"text": "23", "correct": false},
+              {"text": "23", "correct": false},
+              {"text": "23", "correct": false},
+              {"text": "avis", "correct": true}
+          ]}
+]
