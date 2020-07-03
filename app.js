@@ -16,7 +16,7 @@ let question = [];
 
 
 //-----------------------------------------------------------//
-//is json failo i masyva
+//from json file to an array
 fetch("questions.json").then(res => {
     return res.json();
 })
@@ -25,27 +25,28 @@ fetch("questions.json").then(res => {
         question = loadedQuestions;
 
     });
-
-
-   
 //-----------------------------------------------------------//
 
 function startGame() {
     console.log('started')
     correctCount = 0;
-    //prie start mygtuko pridedam klase "hide" kad paslepti
+    //add class 'hide' to startbutton to hide it
     startButton.classList.add('hide')
     resultBox.classList.add('hide')
-answerButtonsElement.classList.remove('hide')
-    //paima bet kuri klausima is array:
+    
+
+
+//show answer choices:
+    answerButtonsElement.classList.remove('hide')
+    //grabs random question from array
     shuffleQuestions = question.sort(() => Math.random() - .5)
     currentQuestionIndex = 0;
 
-    //pasalinam klase 'hide' kad parodytu klausimas
+    //removing class 'hide' to show a question
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
 }
-
+//--------------------------------------------------------//
 function setNextQuestion() {
     reset()
     showQuestion(shuffleQuestions[currentQuestionIndex])
@@ -54,15 +55,15 @@ function setNextQuestion() {
 //-----------------------------------------------------------//
 
 function showQuestion(question) {
-    //html'e pakeici klausima i masyve esanti klausima
+
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
-        //?????createElement???
+
         const button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('btn')
         if (answer.correct) {
-            ///????dataset???
+
 
             button.dataset.correct = answer.correct
 
@@ -78,8 +79,6 @@ function showQuestion(question) {
 function reset() {
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
-
-    //???firstchild???
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
@@ -90,14 +89,19 @@ function reset() {
 //-----------------------------------------------------------//
 
 function selectAnswer(e) {
+   
+   
+
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
+ 
     setStatusclass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusclass(button, button.dataset.correct)
     })
+    
 
-if (selectedButton.dataset = correct) {
+    if (selectedButton.dataset = correct) {
         correctCount++;
 
     }
@@ -105,26 +109,29 @@ if (selectedButton.dataset = correct) {
 
     if (shuffleQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
+       
+
     }
     else {
-endPage();
-    }  
+       
+        endPage();
+    }
 }
 
 
-//------------------------------------------
-function endPage(){
+//--------------------------------------------------//
+function endPage() {
 
-document.getElementById('result').innerHTML = 'RESULT   ' + correctCount + ' / '+ question.length;
-startButton.innerText = 'Restart'
-resultBox.classList.remove('hide')
+    document.getElementById('result').innerHTML = 'RESULT   ' + correctCount + ' / ' + question.length;
+    startButton.innerText = 'Restart'
+    resultBox.classList.remove('hide')
 
-startButton.classList.remove('hide')
+    startButton.classList.remove('hide')
 
-questionContainerElement.classList.add('hide')
+    questionContainerElement.classList.add('hide')
 
-answerButtonsElement.classList.add('hide')
-clearStatusClass();
+    answerButtonsElement.classList.add('hide')
+    clearStatusClass();
 
 }
 //-----------------------------------------------------------//
